@@ -39,13 +39,13 @@ export function SelectedWork() {
             let imageSrc = '';
             let imageAlt = '';
             if (project.id === 'personal-portfolio') {
-              imageSrc = '/public/assets/aistudio/Screenshot_2026-10-25_215518_73430cc6.png';
+              imageSrc = '/assets/aistudio/Screenshot_2026-10-25_215518_73430cc6.png';
               imageAlt = 'Personal Portfolio Website Visual';
             } else if (project.id === 'ai-procurement-system') {
-              imageSrc = '/public/assets/aistudio/ai_procurment_a94a8b1b.jpeg';
+              imageSrc = '/assets/aistudio/ai_procurment_a94a8b1b.jpeg';
               imageAlt = 'AI-Powered Procurement System Visual';
             } else if (project.id === 'upi-fraud-detection') {
-              imageSrc = '/public/assets/aistudio/upi_fraud_e2bf4bca.webp';
+              imageSrc = '/assets/aistudio/upi_fraud_e2bf4bca.webp';
               imageAlt = 'UPI Fraud Detection System Visual';
             }
 
