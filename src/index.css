@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #050505;
+    --surface: #0D0D0D;
+    --surface-2: #141414;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A3A3A3;
+    --text-muted: #737373;
+    --accent-primary: #FF3333;
+    --accent-secondary: #FF5C5C;
+    --border: #262626;
+    --border-light: #333333;
+    --warning: #E7B75D;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3333;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(38, 38, 38, 0.9);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(255, 51, 51, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(255, 51, 51, 0.15);
+}
+
+/* Subtle glowing grid background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(38, 38, 38, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(38, 38, 38, 0.2) 1px, transparent 1px);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
